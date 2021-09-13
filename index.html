@@ -8,6 +8,67 @@
     <link rel="stylesheet" href="css/outline-prototype-safe.css">
 </head>
 <body>
-<h1>Hello, world!</h1>
+<header>
+    <nav>
+        <ul>
+            <li><a href="#home">Главная</a></li>
+            <li><a href="#about">Обо мне</a></li>
+            <li><a href="#portfolio">Портфолио</a></li>
+            <li><a href="#contact">Связаться</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section id="home">
+        <article>
+            <h2>Привет, я Белоус Лев, студент 3 курса Итмо</h2>
+            <h3><a href="#about">Смотреть мою работу</a></h3>
+        </article>
+    </section>
+    <section id="about">
+        <h4>Обо мне</h4>
+        <img src="img/avatar.jpg" alt="Фотография профиля">
+        <aside>
+            Я учусь на 3 курсе программы 09.03.02 университета Итмо, бэкенд-разработчик
+        </aside>
+        <h4>Мои знания</h4>
+        <ul>
+            <li><span>Языки программирования:</span> python</li>
+            <li><span>Фреймворки:</span> flask, django</li>
+            <li><span>Библиотеки:</span> djangorestframework, flask-restful, beautifulsoup4, matplotlib, numpy</li>
+            <li><span>Реляционные БД:</span> mysql, postgresql</li>
+            <li><span>API:</span> VK, Telegram, Google sheets</li>
+        </ul>
+    </section>
+    <section id="portfolio">
+        <h4>Портфолио</h4>
+        <ul>
+            <li>Сайт-бот с записью в очередь (python, flask, vk-api)</li>
+            <li>Бот с записью в очередь (python, flask, telegram-api)</li>
+            <li>Многопользовательский сайт (python, django, rest-api)</li>
+        </ul>
+    </section>
+    <section id="contact">
+        <h4>Связь</h4>
+        <form action="">
+            <p>Есть вопросы?</p>
+            <input placeholder="Имя" type="text" name="name" required="">
+            <input placeholder="Почта" type="email" name="email" required="">
+            <textarea placeholder="Ваше сообщение" name="message"></textarea>
+            <input class="button" type="submit" id="submit" value="Отправить">
+        </form>
+    </section>
+    <section id="up">
+        <p><a href="#home">Наверх</a></p>
+    </section>
+</main>
+<footer>
+    <img src="img/vk.png" alt="Ссылка на вк">
+    <img src="img/tg.png" alt="Ссылка на телеграм">
+    <img src="img/inst.png" alt="Ссылка на инстаграм">
+    <div class="footnote">
+        Белоус Лев <span class="highlight">©2021</span>
+    </div>
+</footer>
 </body>
 </html>
