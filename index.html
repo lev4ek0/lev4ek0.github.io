@@ -20,7 +20,6 @@
             <li><a href="#about">Обо мне</a></li>
             <li><a href="#portfolio">Портфолио</a></li>
             <li><a href="#contact">Связаться</a></li>
-            <li><a href="#additionally">Дополнительно</a></li>
         </ul>
     </nav>
 </header>
@@ -37,89 +36,63 @@
     <section class="about">
         <a class="anchor" id="about"></a>
         <h4>Обо мне</h4>
-        <div class="desc">
+        <i class="underline fas fa-ellipsis-h fa-lg"></i>
+        <div class="content">
             <img class="avatar" src="img/avatar.png" alt="Фотография профиля">
             <aside>
-                Я учусь на 3 курсе программы 09.03.02 университета Итмо, бэкенд-разработчик
+                <p>Мои знания</p>
+                <ul>
+                    <li><span>Языки программирования:</span> python</li>
+                    <li><span>Фреймворки:</span> flask, django</li>
+                    <li><span>Библиотеки:</span> djangorestframework, flask-restful, beautifulsoup4, matplotlib, numpy</li>
+                    <li><span>Реляционные БД:</span> mysql, postgresql</li>
+                    <li><span>API:</span> VK, Telegram, Google sheets</li>
+                    <li><span>Алгоритмы и структуры данных</span></li>
+                    <li><span>ООП</span></li>
+                    <li><span>Умение работать с git</span></li>
+                    <li><span>Docker</span></li>
+                    <li><span>JWT</span></li>
+                </ul>
             </aside>
         </div>
-        <p>Мои знания</p>
-        <ul>
-            <li><span>Языки программирования:</span> python</li>
-            <li><span>Фреймворки:</span> flask, django</li>
-            <li><span>Библиотеки:</span> djangorestframework, flask-restful, beautifulsoup4, matplotlib, numpy</li>
-            <li><span>Реляционные БД:</span> mysql, postgresql</li>
-            <li><span>API:</span> VK, Telegram, Google sheets</li>
-            <li><span>Алгоритмы и структуры данных</span></li>
-            <li><span>ООП</span></li>
-            <li><span>Умение работать с git</span></li>
-            <li><span>Docker</span></li>
-            <li><span>JWT</span></li>
-        </ul>
+        <div>
+            Я учусь на 3 курсе программы 09.03.02 университета Итмо, бэкенд-разработчик.
+        </div>
     </section>
     <section class="portfolio">
         <a class="anchor" id="portfolio"></a>
         <h4>Портфолио</h4>
-        <ul>
-            <li>Сайт-бот с записью в очередь (python, flask, vk-api)</li>
-            <li>Бот с записью в очередь (python, flask, telegram-api)</li>
-            <li><strong>Многопользовательский</strong> сайт (python, django, rest-api)</li>
-        </ul>
+        <i class="underline fas fa-ellipsis-h fa-lg"></i>
+        <div class="content">
+            <ul>
+                <li>Сайт-бот с записью в очередь (python, flask, vk-api)</li>
+                <li>Бот с записью в очередь (python, flask, telegram-api)</li>
+                <li><strong>Многопользовательский</strong> сайт (python, django, rest-api)</li>
+            </ul>
+        </div>
     </section>
     <section class="contact">
         <a class="anchor" id="contact"></a>
         <h4>Связь</h4>
-        <form action="">
-            <p>Есть вопросы?</p>
-            <label for="name"></label>
-            <input placeholder="Имя" type="text" name="name" id="name" required="">
-            <label for="email"></label>
-            <input placeholder="Почта" type="email" name="email" id="email" required="">
-            <label for="message"></label>
-            <textarea placeholder="Ваше сообщение" name="message" id="message"></textarea>
-            <label for="submit"></label>
-            <input class="button" type="submit" id="submit" value="Отправить">
-        </form>
-    </section>
-    <section class="additionally">
-        <a class="anchor" id="additionally"></a>
-        <h4>Дополнительно</h4>
-        <p>Моя котейка</p>
-        <pre>
-
-┈╭━━━┳╮┈┈┈┈┈┈┈┈┈
-┈┃╭━━┻╯┈┈┈┏╮┈╭┓┈
-┈┃┃╭━━━━━╮┃┗━┛┃┈
-┈┃╰┛┊┊┊┊┊╰╯◒┊◒┃┈
-┈╰━╮┊┊┊┊┊┊╭╰━╯╯┈
-┈┈┈┃┏┓┏┳┳┓┃┈┈┈┈┈
-┈┈┈┃┃┃┃┃┃┃┃┈┈┈┈┈
-
-
-        </pre>
-        <p>Мой код</p>
-        <pre>
-            <code>
-                import numpy as np
-
-                def decorate_matrix(n):
-                    A = np.ones((n, n))
-                    B = np.zeros((n-2, n-2))
-                    A[1:n-1, 1:n-1] = B
-                    return 'array({})'.format(',\n'.join(map(str, A))).replace(' ', ', ')
-
-                n = input()
-
-                print(decorate_matrix(int(n)))
-            </code>
-        </pre>
-        <p>Формула успеха <del>не</del> моя</p>
-        <q><ins>Зачем</ins> говорить что это можно сделать за день, если можно сказать, что тут работы на неделю</q>
+        <i class="underline fas fa-ellipsis-h fa-lg"></i>
+        <div class="content">
+            <form action="">
+                <p>Есть вопросы?</p>
+                <label for="name"></label>
+                <input placeholder="Имя" type="text" name="name" id="name" required="">
+                <label for="email"></label>
+                <input placeholder="Почта" type="email" name="email" id="email" required="">
+                <label for="message"></label>
+                <textarea placeholder="Ваше сообщение" name="message" id="message"></textarea>
+                <label for="submit"></label>
+                <input class="button" type="submit" id="submit" value="Отправить">
+            </form>
+        </div>
     </section>
 </main>
 <footer>
     <div class="footer">
-        <a class="home" href="#home"><i class="fas fa-chevron-circle-up fa-3x"></i></a>
+        <a class="home" href="#home"><i class="up fas fa-chevron-circle-up fa-3x"></i></a>
         <a href="https://vk.com/lev4ekr"><img class="social-icon" src="img/vk.png" alt="вконтакте"></a>
         <a href="https://instagram.com/lev.belous"><img class="social-icon" src="img/inst.png" alt="инстаграм"></a>
         <a href="https://t.me/lev4ek"><img class="social-icon" src="img/tg.png" alt="телеграм"></a>
