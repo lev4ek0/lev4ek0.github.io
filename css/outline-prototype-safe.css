@@ -46,3 +46,8 @@ article,
 aside {
     box-shadow: 0 0 0 2px orange;
 }
+
+.social-icon {
+    height: 32px;
+    width: 32px;
+}
