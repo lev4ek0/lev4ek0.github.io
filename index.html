@@ -24,17 +24,17 @@
     </nav>
 </header>
 <main>
-    <a class="anchor" id="home"></a>
     <section class="home">
+        <a class="anchor" id="home"></a>
         <div class="darken">
             <article>
-                <h2>Привет, я Белоус Лев, студент 3 курса Итмо</h2>
-                <h3><a href="#about">Смотреть мою работу</a></h3>
+                <h1>Привет, я <span>Белоус Лев</span>, студент 3 курса Итмо</h1>
+                <a href="#about">Смотреть мою работу</a>
             </article>
         </div>
     </section>
-    <a class="anchor" id="about"></a>
     <section class="about">
+        <a class="anchor" id="about"></a>
         <h4>Обо мне</h4>
         <div class="desc">
             <img src="img/avatar.png" alt="Фотография профиля">
@@ -49,10 +49,15 @@
             <li><span>Библиотеки:</span> djangorestframework, flask-restful, beautifulsoup4, matplotlib, numpy</li>
             <li><span>Реляционные БД:</span> mysql, postgresql</li>
             <li><span>API:</span> VK, Telegram, Google sheets</li>
+            <li>Алгоритмы и структуры данных</li>
+            <li>ООП</li>
+            <li>Умение работать с git</li>
+            <li>Docker</li>
+            <li>JWT</li>
         </ul>
     </section>
-    <a class="anchor" id="portfolio"></a>
     <section class="portfolio">
+        <a class="anchor" id="portfolio"></a>
         <h4>Портфолио</h4>
         <ul>
             <li>Сайт-бот с записью в очередь (python, flask, vk-api)</li>
@@ -60,47 +65,36 @@
             <li><strong>Многопользовательский</strong> сайт (python, django, rest-api)</li>
         </ul>
     </section>
-    <a class="anchor" id="contact"></a>
     <section class="contact">
+        <a class="anchor" id="contact"></a>
         <h4>Связь</h4>
         <form action="">
             <p>Есть вопросы?</p>
-            <label>
-                <input placeholder="Имя" type="text" name="name" required="">
-            </label>
-            <label>
-                <input placeholder="Почта" type="email" name="email" required="">
-            </label>
-            <label>
-                <textarea placeholder="Ваше сообщение" name="message"></textarea>
-            </label>
+            <label for="name"></label>
+            <input placeholder="Имя" type="text" name="name" id="name" required="">
+            <label for="email"></label>
+            <input placeholder="Почта" type="email" name="email" id="email" required="">
+            <label for="message"></label>
+            <textarea placeholder="Ваше сообщение" name="message" id="message"></textarea>
+            <label for="submit"></label>
             <input class="button" type="submit" id="submit" value="Отправить">
         </form>
     </section>
-    <a class="anchor" id="additionally"></a>
     <section class="additionally">
+        <a class="anchor" id="additionally"></a>
         <h4>Дополнительно</h4>
         <p>Моя котейка</p>
         <pre>
-            ******************************::::::::::::::::::::::
-            ******************************::::::::::::::::::::::
-            ********************************::::::::::::::::::::
-            **++*******************************:::::::::::::*=+:
-            **%@%%=+***********************++++**++=%%%%======**
-            **=@%%%%%%=+*******+=======================%=======%
-            ***%@@%%%%%%%%=+==%%%%%%%=%%=====%%%==========%===%@
-            ****=@@@@@@@@@@@@%%%%@@@@@%@%%%%%%@@@%%%======%%%@@#
-            ******%@@@@@@@@%@@@@@@%%%%=%#%=%@%%@@@%%==+=====%%@#
-            *******+@@#######@@@%%%%%@%=@@@@@@@@@@%%%%==%=++===%
-            *********%@######@@@@@@@@@@@@@@@@##@@@==%=======++=%
-            *********+@####@###@@@@@@@@@@###@#@%====%%=++==++::*
-            *********+@@######@@@@@@@@@@@@@###@@%=**=%%%=++++*::
-            ********+%@@#######@@@@@###@%%@@@@##@=++*++%=+=+=++*
-            *+==%%%%%%@########@@@@##@@@%%@%%%@######=***+%%+*::
-            %%%%@%%%%%%%@@@@@#########@@@@@@#@@@@###@==++#@%=+*:
-            +++++======%%%@@@@@@@@@@@########@@@@@@#@%%=@##@%%=+
-            ++++++++++++===%%@@@@@@@%%%%==%@###@@##@@%%@%=@#@%%%
-            ++++++++++++++++=+====%%%%%%%%%==%@@@@%%%@%=++++@#@@
+
+┈╭━━━┳╮┈┈┈┈┈┈┈┈┈
+┈┃╭━━┻╯┈┈┈┏╮┈╭┓┈
+┈┃┃╭━━━━━╮┃┗━┛┃┈
+┈┃╰┛┊┊┊┊┊╰╯◒┊◒┃┈
+┈╰━╮┊┊┊┊┊┊╭╰━╯╯┈
+┈┈┈┃┏┓┏┳┳┓┃┈┈┈┈┈
+┈┈┈┃┃┃┃┃┃┃┃┈┈┈┈┈
+
+
         </pre>
         <p>Мой код</p>
         <pre>
@@ -119,9 +113,7 @@
             </code>
         </pre>
         <p>Формула успеха <del>не</del> моя</p>
-        <q>
-            <em><ins>Зачем</ins> говорить что это можно сделать за день, если можно сказать, что тут работы на неделю</em>
-        </q>
+        <q><ins>Зачем</ins> говорить что это можно сделать за день, если можно сказать, что тут работы на неделю</q>
     </section>
     <section id="up">
         <p><a href="#home">Наверх</a></p>
@@ -132,7 +124,7 @@
     <a href="https://instagram.com/lev.belous"><img class="social-icon" src="img/inst.png" alt="инстаграм"></a>
     <a href="https://t.me/lev4ek"><img class="social-icon" src="img/tg.png" alt="телеграм"></a>
     <div class="footnote">
-        <h4>Белоус Лев <span>©2021</span></h4>
+        <p>Белоус Лев <span>©2021</span></p>
     </div>
 </footer>
 </body>

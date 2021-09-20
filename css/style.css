@@ -72,7 +72,7 @@ article a:hover {
 a.anchor {
     display: block;
     position: relative;
-    top: -60px;
+    top: -100px;
     visibility: hidden;
 }
 
@@ -96,7 +96,6 @@ section.home {
     justify-content: center;
     align-items: center;
     gap: 30px;
-
 }
 
 img {
@@ -104,35 +103,13 @@ img {
     object-fit: contain;
     min-width: 100px;
 }
+
 aside {
     width: 70%;
 }
 
-.sprite-image {
+
+.social-icon {
+    height: 32px;
     width: 32px;
-    height: 32px;
-    overflow: hidden;
-    position: relative;
 }
-
-.vkontakte {
-    position:absolute;
-    left: 0;
-    width: 96px;
-    height: 32px;
-}
-
-.instagram {
-    position:absolute;
-    left: -32px;
-    width: 96px;
-    height: 32px;
-}
-
-.telegram {
-    position:absolute;
-    left: -64px;
-    width: 96px;
-    height: 32px;
-}
-
