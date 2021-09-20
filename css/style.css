@@ -1,0 +1,138 @@
+body {
+    font-family: 'Calibri', sans-serif;
+}
+
+nav ul {
+    display: flex;
+    padding: 20px 20px 20px 80px;
+}
+
+nav ul li {
+    margin-right: 40px;
+    font-size: 20px;
+}
+
+a {
+    color: #000000;
+    text-decoration: #000000;
+}
+
+a:hover {
+    color: #AAAAAA;
+    text-decoration: #000000;
+}
+
+header {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: 100;
+}
+
+main {
+    margin-top: 60px;
+}
+
+.home {
+    height: 100vh;
+    background: url("../img/design-tools.jpg") repeat;
+}
+
+.darken {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+article {
+    width: auto;
+    height: auto;
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+article a {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+article a:hover {
+    color: #AAAAAA;
+    text-decoration: underline;
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -60px;
+    visibility: hidden;
+}
+
+section {
+    padding: 40px 80px;
+}
+
+section h4 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+section.home {
+    padding: 0;
+}
+
+.desc {
+    display: flex;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+}
+
+img {
+    width: 30%;
+    object-fit: contain;
+    min-width: 100px;
+}
+aside {
+    width: 70%;
+}
+
+.sprite-image {
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    position: relative;
+}
+
+.vkontakte {
+    position:absolute;
+    left: 0;
+    width: 96px;
+    height: 32px;
+}
+
+.instagram {
+    position:absolute;
+    left: -32px;
+    width: 96px;
+    height: 32px;
+}
+
+.telegram {
+    position:absolute;
+    left: -64px;
+    width: 96px;
+    height: 32px;
+}
+
