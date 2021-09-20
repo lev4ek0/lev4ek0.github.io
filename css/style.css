@@ -124,7 +124,7 @@ aside {
 
 .about {
     position: relative;
-    box-shadow: 0 0 10px 5px rgb(203, 203, 203);
+    box-shadow: 0 0 10px 5px rgb(0, 0, 0);
 }
 
 .underline {
