@@ -124,7 +124,11 @@ aside {
 
 .about {
     position: relative;
-    box-shadow: 0 0 10px 5px rgb(0, 0, 0);
+    box-shadow: 0 -20px 10px 5px rgb(0, 0, 0);
+}
+
+#second {
+    text-align: center;
 }
 
 .underline {
@@ -137,7 +141,7 @@ aside {
 
 .portfolio {
     background-color: rgba(162, 161, 161, 0.1);
-    box-shadow: 0 0 10px 5px rgb(203, 203, 203);
+    box-shadow: 0 0 10px 5px rgb(199, 199, 199);
 }
 
 .contact {
