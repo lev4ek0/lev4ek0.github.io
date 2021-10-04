@@ -237,6 +237,10 @@ footer {
     left: calc(50% - 25px);
 }
 
+.up:hover {
+    color: #8582D9;
+}
+
 .footer a{
     margin: 0 15px 0 15px;
 }
