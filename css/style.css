@@ -126,6 +126,8 @@ aside {
     top: 0;
     right: 0;
     position: absolute;
+    text-indent: 30px;
+
 }
 
 .about {
