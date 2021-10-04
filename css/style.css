@@ -8,6 +8,7 @@ body {
 nav ul {
     display: flex;
     padding: 20px 20px 20px 80px;
+    text-transform: capitalize;
 }
 
 nav ul li {
