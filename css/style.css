@@ -82,6 +82,10 @@ a.anchor {
     visibility: hidden;
 }
 
+ul li div {
+    text-decoration: line-through;
+    display: inline;
+}
 section {
     padding: 40px 80px;
     height: 100vh;
