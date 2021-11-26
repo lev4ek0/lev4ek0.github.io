@@ -1,0 +1,100 @@
+.table tr:nth-child(even){
+    background: #dcdcdc;
+}
+
+.table tr:nth-child(odd){
+    background: #c0c0c0;
+}
+
+.table th:nth-child(even){
+    background: #a8a8a8;
+}
+
+.table th:nth-child(odd){
+    background: #939393;
+}
+
+.table{
+    width: 100%;
+    justify-self: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-collapse: collapse;
+    white-space: nowrap;
+}
+
+.table tr{
+    transition: all 0.5s;
+}
+
+.table th{
+    transition: all 0.5s;
+}
+.table tr:hover{
+    background-color: rgba(171, 255, 225, 0.8);
+}
+
+.table th:hover{
+    background-color: rgba(171, 255, 244, 0.8);
+}
+
+@media screen and (max-device-width: 880px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead tr {
+        position: absolute;
+        display: none;
+    }
+
+    tr {
+        border-bottom: 1px solid #ccc;
+    }
+
+    td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 30%;
+    }
+
+    td:before {
+        position: absolute;
+        top: 0;
+        left: 6px;
+        width: 100%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+    }
+
+    td:nth-of-type(1):before {
+        content: "#";
+    }
+
+    td:nth-of-type(2):before {
+        content: "Проект";
+    }
+
+    td:nth-of-type(3):before {
+        content: "ЯП";
+    }
+
+    td:nth-of-type(4):before {
+        content: "Фреймворк";
+    }
+
+    td:nth-of-type(5):before {
+        content: "API";
+    }
+}
+
+@media screen and (min-device-width: 1920px) {
+    .table{
+        width: 70%;
+        justify-self: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        border-collapse: collapse;
+        white-space: nowrap;
+    }
+}
