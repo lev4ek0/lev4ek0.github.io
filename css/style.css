@@ -645,3 +645,29 @@ footer {
         height: 500px;
     }
 }
+
+@media screen and (min-device-width: 1920px) {
+    form p, input, textarea {
+        font-size: 30px !important;
+    }
+    input.button {
+        width: 250px;
+        height: 80px;
+    }
+
+    input:not(.button) {
+        width: 700px;
+        height: 90px;
+    }
+
+    textarea {
+        width: 700px;
+        height: 300px;
+    }
+
+    form {
+        top: -30%;
+        width: 700px;
+        height: 500px;
+    }
+}
