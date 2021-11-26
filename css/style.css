@@ -8,12 +8,32 @@ body {
 nav ul {
     display: flex;
     padding: 20px 20px 20px 80px;
-    text-transform: capitalize;
 }
 
 nav ul li {
     margin-right: 40px;
     font-size: 20px;
+}
+
+@media screen and (max-device-width: 480px) {
+    nav ul li {
+        margin-right: 22px;
+        font-size: 40px;
+    }
+}
+
+@media screen and (min-device-width: 481px) and (max-device-width: 880px) {
+    nav ul li {
+        margin-right: 22px;
+        font-size: 35px;
+    }
+}
+
+@media screen and (min-device-width: 881px) and (max-device-width: 1180px) {
+    nav ul li {
+        margin-right: 22px;
+        font-size: 30px;
+    }
 }
 
 span {
@@ -67,6 +87,24 @@ article {
     text-align: center;
 }
 
+@media screen and (max-device-width: 480px){
+    article {
+        font-size: 40px;
+    }
+}
+
+@media screen and (min-device-width: 481px) and (max-device-width: 880px){
+    article {
+        font-size: 35px;
+    }
+}
+
+@media screen and (min-device-width: 881px) and (max-device-width: 1180px) {
+    article {
+        font-size: 30px;
+    }
+}
+
 article a {
     color: #FFFFFF;
     text-decoration: underline;
@@ -99,6 +137,24 @@ section h4 {
     font-weight: bold;
 }
 
+@media screen and (max-device-width: 480px){
+    section h4 {
+        font-size: 50px;
+    }
+}
+
+@media screen and (min-device-width: 481px) and (max-device-width: 880px){
+    section h4 {
+        font-size: 45px;
+    }
+}
+
+@media screen and (min-device-width: 881px) and (max-device-width: 1180px) {
+    section h4 {
+        font-size: 40px;
+    }
+}
+
 section.home {
     padding: 0;
 }
@@ -120,6 +176,33 @@ img.avatar {
     width: 400px;
 }
 
+@media screen and (max-device-width: 480px){
+    img.avatar {
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 800px;
+    }
+}
+
+@media screen and (min-device-width: 481px) and (max-device-width: 880px){
+    img.avatar {
+        top: 0;
+        left: auto;
+        position: absolute;
+        width: 500px;
+    }
+}
+
+@media screen and (min-device-width: 881px) and (max-device-width: 1180px) {
+    img.avatar {
+        top: 0;
+        left: auto;
+        position: absolute;
+        width: 500px;
+    }
+}
+
 aside {
     font-size: 16px;
     width: calc(100vw - 660px);
@@ -127,7 +210,33 @@ aside {
     right: 0;
     position: absolute;
     text-indent: 30px;
+}
 
+@media screen and (max-device-width: 480px){
+    aside {
+        font-size: 40px;
+        width: 800px;
+        right: 0;
+        top: 55vh;
+    }
+}
+
+@media screen and (min-device-width: 481px) and (max-device-width: 880px){
+    aside {
+        font-size: 35px;
+        width: 800px;
+        right: auto;
+        top: 55vh;
+    }
+}
+
+@media screen and (min-device-width: 881px) and (max-device-width: 1180px) {
+    aside {
+        font-size: 30px;
+        width: 800px;
+        right: auto;
+        top: 55vh;
+    }
 }
 
 .about {
@@ -137,6 +246,35 @@ aside {
 
 #second {
     text-align: center;
+}
+
+@media screen and (max-device-width: 480px){
+    #second {
+        position: absolute;
+        top: 900px;
+        left: -10px;
+        font-size: 40px;
+    }
+}
+
+@media screen and (min-device-width: 481px) and (max-device-width: 880px){
+    #second {
+        position: absolute;
+        top: 600px;
+        left: auto;
+        font-size: 35px;
+        width: 800px;
+    }
+}
+
+@media screen and (min-device-width: 881px) and (max-device-width: 1180px) {
+    #second {
+        position: absolute;
+        top: 600px;
+        left: auto;
+        font-size: 30px;
+        width: 800px;
+    }
 }
 
 .underline {
