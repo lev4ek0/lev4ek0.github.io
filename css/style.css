@@ -566,3 +566,19 @@ footer {
         width: 40px;
     }
 }
+
+#timer {
+    position: absolute;
+    left: 0;
+    top: 112px;
+}
+
+a.active {
+    text-decoration: underline;
+}
+
+#load {
+    position: absolute;
+    right: 0;
+    top: 112px;
+}
