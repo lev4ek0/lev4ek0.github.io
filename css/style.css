@@ -566,3 +566,82 @@ footer {
         width: 40px;
     }
 }
+
+@media screen and (max-device-width: 480px) {
+    form p, input, textarea {
+        font-size: 40px !important;
+    }
+
+    input.button {
+        width: 300px;
+        height: 100px;
+    }
+
+    input:not(.button) {
+        width: 700px;
+        height: 90px;
+    }
+
+    textarea {
+        width: 700px;
+        height: 500px;
+    }
+
+    form {
+        top: 0;
+        width: 700px;
+        height: 700px;
+    }
+}
+
+@media screen and (min-device-width: 481px) and (max-device-width: 881px) {
+    form p, input, textarea {
+        font-size: 35px !important;
+    }
+    input.button {
+        width: 275px;
+        height: 90px;
+    }
+
+    input:not(.button) {
+        width: 600px;
+        height: 90px;
+    }
+
+    textarea {
+        width: 600px;
+        height: 400px;
+    }
+
+    form {
+        top: -30%;
+        width: 600px;
+        height: 600px;
+    }
+}
+
+@media screen and (min-device-width: 881px) and (max-device-width: 1181px) {
+    form p, input, textarea {
+        font-size: 30px !important;
+    }
+    input.button {
+        width: 250px;
+        height: 80px;
+    }
+
+    input:not(.button) {
+        width: 500px;
+        height: 90px;
+    }
+
+    textarea {
+        width: 500px;
+        height: 300px;
+    }
+
+    form {
+        top: -30%;
+        width: 500px;
+        height: 500px;
+    }
+}
