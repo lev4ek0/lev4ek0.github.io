@@ -10,6 +10,18 @@ nav ul {
     padding: 20px 20px 20px 80px;
 }
 
+@media screen and (max-device-width: 480px) {
+    nav ul {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-device-width: 880px) {
+    main {
+        margin-top: 100px !important;
+    }
+}
+
 .banner {
     position: absolute;
 }
@@ -686,4 +698,8 @@ a.active {
         width: 700px;
         height: 500px;
     }
+}
+
+#none {
+    display: none;
 }
