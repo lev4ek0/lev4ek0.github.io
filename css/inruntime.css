@@ -28,3 +28,43 @@
 .line-through {
     text-decoration: line-through;
 }
+
+.buttons {
+    display: flex;
+    height: 25px
+}
+
+@media screen and (min-device-width: 1920px) {
+    .task {
+        width: 700px;
+        height: 90px;
+        margin-top: 70px;
+        font-size: 30px;
+
+    }
+
+    .buttons input {
+        width: 40px;
+        height: 40px;
+        margin: auto 40px auto auto;
+    }
+
+    .buttons button {
+        width: 120px;
+        height: 40px;
+        background-color: #8582D9;
+        margin-right: 40px;
+        font-size: 25px;
+
+    }
+
+    .text {
+        width: 440px;
+        font-size: 30px;
+    }
+
+    .buttons {
+        display: flex;
+        height: 40px
+    }
+}
