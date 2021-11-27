@@ -156,7 +156,7 @@ ul li div {
 }
 section {
     padding: 40px 80px;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 section h4 {
