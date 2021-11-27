@@ -52,7 +52,7 @@ function createTask(name, checkbox) {
     let checked = checkbox === true ? 'checked' : '';
     task_o.insertAdjacentHTML('afterbegin', '<div class="task">\n' +
         `                    <div class="text ${checked ? 'line-through' : ''}">` + name + '</div>\n' +
-        '                    <div class="buttons" style="display: flex; height: 25px;">\n' +
+        '                    <div class="buttons">\n' +
         '                        <label>\n' +
         '                            <input onclick="inverseCheck(this)" type="checkbox" ' + checked + '>\n' +
         '                        </label>\n' +
