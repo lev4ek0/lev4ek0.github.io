@@ -45,7 +45,13 @@ function inverseCheck(el) {
             tasks[l].checkbox = !tasks[l].checkbox;
         }
     }
-    content.classList.contains('line-through') ? content.classList.remove('line-through') : content.classList.add('line-through')
+    if (content.classList.contains('line-through')) {
+        content.classList.remove('line-through')
+        content.parentNode.classList.remove('completed')
+    } else {
+        content.classList.add('line-through')
+        content.parentNode.classList.add('completed')
+    }
     localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
@@ -63,6 +69,7 @@ function createTask(name, checked) {
     if (checked) {
         checkbox.setAttribute('checked','');
         text.classList.add('line-through')
+        text.parentNode.classList.add('completed')
     }
     task_o.appendChild(template);
 }

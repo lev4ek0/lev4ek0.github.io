@@ -5,7 +5,11 @@
     margin: auto;
     width: 500px;
     height: 50px;
-    background-color: #8582D9;
+    background-color: #c5c5c5;
+}
+
+.completed {
+    background-color: #87d28e;
 }
 
 .text {
@@ -21,7 +25,7 @@
 .buttons button {
     width: 75px;
     height: 25px;
-    background-color: #8582D9;
+    background-color: #d98282;
     margin-right: 20px;
 }
 
