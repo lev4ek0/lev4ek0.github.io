@@ -7,6 +7,7 @@ class Task {
 
 }
 
+let task_o = document.getElementById("task_o")
 let input = document.getElementById("task");
 let tasks = [];
 tasks = JSON.parse(localStorage.getItem('tasks'))
@@ -48,23 +49,28 @@ function inverseCheck(el) {
     localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
-function createTask(name, checkbox) {
-    let checked = checkbox === true ? 'checked' : '';
-    task_o.insertAdjacentHTML('afterbegin', '<div class="task">\n' +
-        `                    <div class="text ${checked ? 'line-through' : ''}">` + name + '</div>\n' +
-        '                    <div class="buttons">\n' +
-        '                        <label>\n' +
-        '                            <input onclick="inverseCheck(this)" type="checkbox" ' + checked + '>\n' +
-        '                        </label>\n' +
-        '                        <button onclick="deleteTask(this)">Удалить</button>\n' +
-        '                    </div>\n' +
-        '                </div>');
+function setNumber(number, text) {
+    return number + ". " + text
+}
+
+function createTask(name, checked) {
+
+    let template = document.getElementById('template').content.cloneNode(true);
+    let text = template.getElementById('text');
+    text.innerText = name
+
+    let checkbox = template.getElementById('inverse');
+    if (checked) {
+        checkbox.setAttribute('checked','');
+        text.classList.add('line-through')
+    }
+    task_o.appendChild(template);
 }
 
 function enter() {
     let mytext = document.getElementById('task');
-    createTask(mytext.value);
-    tasks.push(new Task(mytext.value));
+    createTask(setNumber(tasks.length, mytext.value));
+    tasks.push(new Task(setNumber(tasks.length, mytext.value)));
     localStorage.setItem('tasks', JSON.stringify(tasks));
     mytext.value = "";
 }

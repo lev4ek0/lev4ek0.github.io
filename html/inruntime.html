@@ -40,11 +40,20 @@
                 </label>
                 <button class="button" id="none" onclick="enter()">кнопка</button>
             </form>
-            <div class="list" style="margin:20px; flex-direction: row" id="task_o">
-
+            <div class="list" id="task_o">
+                <template id ="template">
+                    <div class="task" id="task_p">
+                        <div class="text" id="text"></div>
+                        <div class="buttons" id="buttons">
+                            <label>
+                                <input onclick="inverseCheck(this)" type="checkbox" id="inverse">
+                            </label>
+                            <button onclick="deleteTask(this)">Удалить</button>
+                        </div>
+                    </div>
+                </template>
             </div>
         </div>
-
     </section>
     <script rel="script" src="../js/inruntime.js"></script>
 </main>
