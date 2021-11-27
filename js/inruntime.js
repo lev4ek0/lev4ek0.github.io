@@ -74,10 +74,20 @@ function createTask(name, checked) {
     task_o.appendChild(template);
 }
 
+function getLength() {
+    let number
+    try {
+        number = tasks[tasks.length - 1].text
+    } catch {
+        return 0
+    }
+    return number.split(".")[0]
+}
+
 function enter() {
     let mytext = document.getElementById('task');
-    createTask(setNumber(tasks.length, mytext.value));
-    tasks.push(new Task(setNumber(tasks.length, mytext.value)));
+    createTask(setNumber(parseInt(getLength()) + 1, mytext.value));
+    tasks.push(new Task(setNumber(parseInt(getLength()) + 1, mytext.value)));
     localStorage.setItem('tasks', JSON.stringify(tasks));
     mytext.value = "";
 }
