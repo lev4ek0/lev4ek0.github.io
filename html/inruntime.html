@@ -9,13 +9,13 @@
     <!--    <link rel="stylesheet" href="css/outline-prototype-safe.css">-->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/table.css">
+    <link rel="stylesheet" href="../css/inruntime.css">
     <script rel="script" src="../js/timer.js"></script>
     <script rel="script" src="../js/load.js"></script>
     <script rel="script" src="../js/menu.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"/>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <!--    <lin<span>k rel="script" href="js/timer.js">-->
-
 </head>
 <body>
 <header id="header">
@@ -30,33 +30,27 @@
     </nav>
 </header>
 <main>
-    <section class="about">
-        <a class="anchor" id="about"></a>
-        <h4>Обо мне</h4>
-        <i class="underline fas fa-ellipsis-h fa-lg"></i>
-        <div class="content">
-            <img class="avatar" src="../img/avatar.png" alt="Фотография профиля">
-            <aside>
-                <p>Мои знания</p>
-                <ul>
-                    <li><span>Языки программирования:</span> Python, (Java), (C#)</li>
-                    <li><span>Веб-технологии:</span> REST, JWT, OAuth</li>
-                    <li><span>Фреймворки:</span> Django, Flask</li>
-                    <li><span>Базы данных:</span> PostgreSQL, MySQL</li>
-                    <li><span>Алгоритмы:</span> Сложность алгоритмов, теория графов, динамическое программирование</li>
-                    <li><span>API:</span> Telegram, VK, Google (включая Google Sheets)</li>
-                    <li><span>Другое:</span> Git, Docker, OOP, Postman, Pandas</li>
-                </ul>
-            </aside>
+    <section class="inruntime">
+        <a class="anchor" id="inruntime"></a>
+        <h4>Task</h4>
+        <div class="" style="">
+            <form onsubmit="return false" style="position:static ;height: 50px">
+                <label for="task">
+                    <input style="margin: 0" placeholder="Ваше сообщение" name="message" id="task">
+                </label>
+                <button class="button" id="none" onclick="enter()">кнопка</button>
+            </form>
+            <div class="list" style="margin:20px; flex-direction: row" id="task_o">
+
+            </div>
         </div>
-        <div id="second">
-            Я учусь на 3 курсе программы 09.03.02 университета Итмо, бэкенд-разработчик.
-        </div>
+
     </section>
+    <script rel="script" src="../js/inruntime.js"></script>
 </main>
 <footer>
     <div class="footer">
-        <a class="home" href="#about"><i class="up fas fa-chevron-circle-up fa-3x"></i></a>
+        <a class="home" href="#inruntime"><i class="up fas fa-chevron-circle-up fa-3x"></i></a>
         <a href="https://vk.com/lev4ekr" target="_blank"><img class="social-icon" src="../img/vk.png" alt="вконтакте"></a>
         <a href="https://instagram.com/lev.belous" target="_blank"><img class="social-icon" src="../img/inst.png" alt="инстаграм"></a>
         <a href="https://t.me/lev4ek" target="_blank"><img class="social-icon" src="../img/tg.png" alt="телеграм"></a>

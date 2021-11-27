@@ -1,0 +1,30 @@
+.task {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: auto;
+    width: 500px;
+    height: 50px;
+    background-color: #8582D9;
+}
+
+.text {
+    width: 350px
+}
+
+.buttons input {
+    width: 25px;
+    height: 25px;
+    margin: auto 20px auto auto;
+}
+
+.buttons button {
+    width: 75px;
+    height: 25px;
+    background-color: #8582D9;
+    margin-right: 20px;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
