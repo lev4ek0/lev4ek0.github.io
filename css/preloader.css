@@ -1,0 +1,70 @@
+.preloader {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    /* фоновый цвет элемента */
+    /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+}
+
+.preloader__row {
+    position: relative;
+    justify-content: center;
+    margin: auto;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    animation: preloader-rotate 2s infinite linear;
+}
+
+.preloader__item {
+    top: 28px;
+    left: 13px;
+    width: 20px;
+    height: 10px;
+    transform-origin: 100% 6px;
+    transform: rotate(0deg);
+    position: absolute;
+}
+
+.preloader__item:nth-child(1) {
+    transform: rotate(45deg);
+}
+.preloader__item:nth-child(2) {
+    transform: rotate(90deg);
+}
+.preloader__item:nth-child(3) {
+    transform: rotate(135deg);
+}
+.preloader__item:nth-child(4) {
+    transform: rotate(180deg);
+}
+.preloader__item:nth-child(5) {
+    transform: rotate(225deg);
+}
+.preloader__item:nth-child(6) {
+    transform: rotate(270deg);
+}
+.preloader__item:nth-child(7) {
+    transform: rotate(315deg);
+}
+
+.circle {
+    background: #010440;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+}
+.loaded_hiding .preloader {
+    transition: 0.3s opacity;
+    opacity: 0;
+}
+
+@keyframes preloader-rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.preloader.loaded {
+    display: none;
+}
