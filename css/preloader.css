@@ -12,7 +12,7 @@
     height: 70px;
     text-align: center;
     animation-name: preloader-rotate;
-    animation-duration: 3s;
+    animation-duration: 4s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
