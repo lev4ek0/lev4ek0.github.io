@@ -4,18 +4,35 @@ class Task {
         this.checkbox = false;
         this.text = text;
     }
-
 }
 
+let cond;
+
+let tmp = document.getElementById('template');
+const btn = document.querySelector('#none');
+
+btn.addEventListener('mouseenter', () => {
+    btn.style.top = `${Math.random() * 500 + 135}px`;
+})
+
+let task_o = document.getElementById("task_o");
 let input = document.getElementById("task");
-let tasks = [];
-tasks = JSON.parse(localStorage.getItem('tasks'))
+let tasks;
 
-if (tasks === null) {
-    tasks = []
-} else {
-    tasks.forEach(el => createTask(el.text, el.checkbox))
+function start() {
+    tasks = JSON.parse(localStorage.getItem('tasks'));
+    cond = JSON.parse(localStorage.getItem('cond'));
+    if (cond===null){
+        cond = 0;
+    }
+    if (tasks === null) {
+        tasks = [];
+    } else {
+        tasks.forEach(el => createTask(el.text, el.checkbox));
+    }
 }
+
+start()
 
 input.addEventListener("keyup", function(event) {
     if (event.key === "Enter") {
@@ -44,27 +61,85 @@ function inverseCheck(el) {
             tasks[l].checkbox = !tasks[l].checkbox;
         }
     }
-    content.classList.contains('line-through') ? content.classList.remove('line-through') : content.classList.add('line-through')
+    if (content.classList.contains('line-through')) {
+        content.classList.remove('line-through');
+        content.parentNode.classList.remove('completed');
+    } else {
+        content.classList.add('line-through');
+        content.parentNode.classList.add('completed');
+    }
     localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
-function createTask(name, checkbox) {
-    let checked = checkbox === true ? 'checked' : '';
-    task_o.insertAdjacentHTML('afterbegin', '<div class="task">\n' +
-        `                    <div class="text ${checked ? 'line-through' : ''}">` + name + '</div>\n' +
-        '                    <div class="buttons">\n' +
-        '                        <label>\n' +
-        '                            <input onclick="inverseCheck(this)" type="checkbox" ' + checked + '>\n' +
-        '                        </label>\n' +
-        '                        <button onclick="deleteTask(this)">Удалить</button>\n' +
-        '                    </div>\n' +
-        '                </div>');
+function setNumber(number, text) {
+    return number + ". " + text;
+}
+
+function createTask(name, checked) {
+
+    let template = tmp.content.cloneNode(true);
+    let text = template.getElementById('text');
+    text.innerText = name;
+
+    let checkbox = template.getElementById('inverse');
+    if (checked) {
+        checkbox.setAttribute('checked','');
+        text.classList.add('line-through');
+        text.parentNode.classList.add('completed');
+    }
+
+    if (cond === 0){
+        task_o.appendChild(template);
+    } else if (cond === 1) {
+        tmp.parentNode.insertBefore(template, tmp.nextSibling);
+    } else if (cond === 2) {
+        if (Math.floor(Math.random() * 2) === 0) {
+            task_o.appendChild(template);
+        } else {
+            tmp.parentNode.insertBefore(template, tmp.nextSibling);
+        }
+    }
+}
+
+function getNumber(number) {
+    return parseInt(number.split(".")[0]);
 }
 
 function enter() {
     let mytext = document.getElementById('task');
-    createTask(mytext.value);
-    tasks.push(new Task(mytext.value));
+    let number = "";
+    try {
+        number = Math.max(getNumber(tasks[tasks.length - 1].text), getNumber(tasks[0].text));
+    } catch {}
+    createTask(setNumber(number + 1, mytext.value));
+    tasks.push(new Task(setNumber(number + 1, mytext.value)));
     localStorage.setItem('tasks', JSON.stringify(tasks));
     mytext.value = "";
+}
+
+function sortUp(){
+    cond = 0;
+    localStorage.setItem('cond', '0');
+    let copy = JSON.stringify(tasks);
+    document.querySelectorAll('.task_q').forEach(el => deleteTask(el));
+    localStorage.setItem('tasks', copy);
+    start();
+}
+
+function sortDown(){
+    cond = 1;
+    localStorage.setItem('cond', '1');
+    let copy = JSON.stringify(tasks);
+    document.querySelectorAll('.task_q').forEach(el => deleteTask(el));
+    localStorage.setItem('tasks', copy);
+    start();
+}
+
+function random(){
+    cond = 2;
+    localStorage.setItem('cond', '2');
+    let copy = JSON.stringify(tasks);
+    document.querySelectorAll('.task_q').forEach(el => deleteTask(el));
+    localStorage.setItem('tasks', copy);
+    start();
 }

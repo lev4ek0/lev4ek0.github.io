@@ -156,7 +156,7 @@ ul li div {
 }
 section {
     padding: 40px 80px;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 section h4 {
@@ -698,8 +698,4 @@ a.active {
         width: 700px;
         height: 500px;
     }
-}
-
-#none {
-    display: none;
 }
