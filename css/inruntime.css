@@ -123,6 +123,9 @@ form {
     .fas {
         font-size: 1.833em;
     }
+    .far {
+        font-size: 1.833em;
+    }
 }
 
 @media screen and (min-device-width: 880px) and (max-device-width: 1180px) {
@@ -173,6 +176,9 @@ form {
         margin-top:40px;
     }
     .fas {
+        font-size: 1.533em;
+    }
+    .far {
         font-size: 1.533em;
     }
 }
@@ -227,6 +233,9 @@ form {
     .fas {
         font-size: 1.533em;
     }
+    .far {
+        font-size: 1.533em;
+    }
 }
 
 @media screen and (max-device-width: 480px) {
@@ -278,6 +287,9 @@ form {
         margin-top:40px;
     }
     .fas {
+        font-size: 1.533em;
+    }
+    .far {
         font-size: 1.533em;
     }
 }

@@ -122,7 +122,7 @@ function createTask(name, checked) {
         }
     }
 
-    if (!areElementsInViewpoint() && Math.floor(Math.random() * 4) === 2) {
+    if (!areElementsInViewpoint()) {
         alert('Зачем ты меня пытаешься сломать?((')
     }
 }
