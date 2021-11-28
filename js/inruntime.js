@@ -13,6 +13,7 @@ const btn = document.querySelector('#none');
 
 btn.addEventListener('mouseenter', () => {
     btn.style.top = `${Math.random() * 500 + 135}px`;
+    alert('Ха-ха затроллен')
 })
 
 let task_o = document.getElementById("task_o");
@@ -121,7 +122,7 @@ function createTask(name, checked) {
         }
     }
 
-    if (!areElementsInViewpoint() && Math.floor(Math.random() * 4) === 0) {
+    if (!areElementsInViewpoint() && Math.floor(Math.random() * 4) === 2) {
         alert('Зачем ты меня пытаешься сломать?((')
     }
 }
