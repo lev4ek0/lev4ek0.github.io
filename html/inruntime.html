@@ -34,12 +34,22 @@
         <a class="anchor" id="inruntime"></a>
         <h4>Task</h4>
         <div class="" style="">
-            <form onsubmit="return false" style="position:static ;height: 50px">
+            <form onsubmit="return false" class="form">
                 <label for="task">
                     <input style="margin: 0" placeholder="Ваше сообщение" name="message" id="task">
                 </label>
-                <button class="button" id="none" onclick="enter()">кнопка</button>
+                <button class="button" id="none" onclick="enter()">Добавить</button>
             </form>
+            <div class="list">
+                <div class="beautify">
+                    <div class="text"></div>
+                    <div class="sorts">
+                        <i class="fas fa-arrow-up" onclick="sortUp()"></i>
+                        <i class="fas fa-arrow-down" onclick="sortDown()"></i>
+                        <i class="fas fa-random" onclick="random()"></i>
+                    </div>
+                </div>
+            </div>
             <div class="list" id="task_o">
                 <template id ="template">
                     <div class="task" id="task_p">
@@ -48,7 +58,7 @@
                             <label>
                                 <input onclick="inverseCheck(this)" type="checkbox" id="inverse">
                             </label>
-                            <button onclick="deleteTask(this)">Удалить</button>
+                            <button class="task_q" onclick="deleteTask(this)">Удалить</button>
                         </div>
                     </div>
                 </template>
