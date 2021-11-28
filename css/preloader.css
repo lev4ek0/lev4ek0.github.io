@@ -2,8 +2,6 @@
     width: 100px;
     height: 100px;
     margin: auto;
-    /* фоновый цвет элемента */
-    /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
 }
 
 .preloader__row {
@@ -57,12 +55,12 @@
 
 
 .circle {
-    background: #6c69d2;
+    background: #afaddc;
     width: 5px;
     height: 5px;
     border-radius: 50%;
     animation-name: preloader-color;
-    animation-duration: 1s;
+    animation-duration: 2s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     animation-play-state: running;
@@ -83,13 +81,13 @@
 
 @keyframes preloader-color {
     0% {
-        background: #6c69d2;
+        background: #afaddc;
     }
     50% {
-        background: #8582D9;
+        background: #6c69d2;
     }
     100% {
-        background: #6c69d2;
+        background: #afaddc;
     }
 }
 
