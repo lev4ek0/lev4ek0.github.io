@@ -75,6 +75,27 @@ function setNumber(number, text) {
     return number + ". " + text;
 }
 
+function isElementInViewport (el) {
+    if (typeof jQuery === "function" && el instanceof jQuery) {
+        el = el[0];
+    }
+
+    var rect = el.getBoundingClientRect();
+
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /* or $(window).height() */
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth) /* or $(window).width() */
+    );
+}
+
+function areElementsInViewpoint () {
+    let state = true
+    document.querySelectorAll('.task_q').forEach(el => state = isElementInViewport(el) && state);
+    return state
+}
+
 function createTask(name, checked) {
 
     let template = tmp.content.cloneNode(true);
@@ -99,6 +120,10 @@ function createTask(name, checked) {
             tmp.parentNode.insertBefore(template, tmp.nextSibling);
         }
     }
+
+    if (!areElementsInViewpoint() && Math.floor(Math.random() * 4) === 0) {
+        alert('Зачем ты меня пытаешься сломать?((')
+    }
 }
 
 function getNumber(number) {
@@ -117,29 +142,47 @@ function enter() {
     mytext.value = "";
 }
 
-function sortUp(){
-    cond = 0;
-    localStorage.setItem('cond', '0');
+function show(){
     let copy = JSON.stringify(tasks);
     document.querySelectorAll('.task_q').forEach(el => deleteTask(el));
     localStorage.setItem('tasks', copy);
     start();
+}
+
+function sortUp(){
+    cond = 0;
+    localStorage.setItem('cond', '0');
+    show()
 }
 
 function sortDown(){
     cond = 1;
     localStorage.setItem('cond', '1');
-    let copy = JSON.stringify(tasks);
-    document.querySelectorAll('.task_q').forEach(el => deleteTask(el));
-    localStorage.setItem('tasks', copy);
-    start();
+    show()
 }
 
-function random(){
+function random() {
     cond = 2;
     localStorage.setItem('cond', '2');
     let copy = JSON.stringify(tasks);
     document.querySelectorAll('.task_q').forEach(el => deleteTask(el));
     localStorage.setItem('tasks', copy);
     start();
+}
+function check(){
+    let copy = JSON.stringify(tasks);
+    document.querySelectorAll('.task_q').forEach(el => el.parentNode.childNodes[1].childNodes[1].getAttribute('checked') === null ? deleteTask(el) : {});
+    localStorage.setItem('tasks', copy);
+    tasks = JSON.parse(localStorage.getItem('tasks'));
+}
+
+function notCheck(){
+    let copy = JSON.stringify(tasks);
+    document.querySelectorAll('.task_q').forEach(el => el.parentNode.childNodes[1].childNodes[1].getAttribute('checked') !== null ? deleteTask(el) : {});
+    localStorage.setItem('tasks', copy);
+    tasks = JSON.parse(localStorage.getItem('tasks'));
+}
+
+function allTasks(){
+    show()
 }
