@@ -68,3 +68,15 @@
 .preloader.loaded {
     display: none;
 }
+
+.error {
+    justify-content: center;
+}
+
+#none {
+    display: none;
+}
+
+#error {
+    margin-top: 50px;
+}

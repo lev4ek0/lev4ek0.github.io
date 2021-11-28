@@ -24,10 +24,12 @@ window.onload = async function () {
     let response = await fetch(url);
     if (response.ok) {
         let json = await response.json();
-        json = randomize(json)
+        json = randomize(json);
         tasks = serialize(json);
     } else {
-        alert(response.status);
+        window.setTimeout(function () {
+            document.getElementById('none').setAttribute('id', 'error');
+        }, 500);
     }
     document.getElementById('wait').classList.add('loaded_hiding');
     window.setTimeout(function () {

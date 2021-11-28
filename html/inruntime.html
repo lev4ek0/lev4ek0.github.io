@@ -40,7 +40,7 @@
                 <label for="task">
                     <input style="margin: 0" placeholder="Ваше сообщение" name="message" id="task">
                 </label>
-                <button class="button" id="none" onclick="enter()">Добавить</button>
+                <button class="button none" onclick="enter()">Добавить</button>
             </form>
             <div class="list">
                 <div class="beautify">
@@ -65,6 +65,11 @@
                     <div class="preloader__item"><div class="circle"></div></div>
                     <div class="preloader__item"><div class="circle"></div></div>
                     <div class="preloader__item"><div class="circle"></div></div>
+                </div>
+            </div>
+            <div class="list" id="none">
+                <div class="task error">
+                    <div>⚠ Что-то пошло не так</div>
                 </div>
             </div>
             <div class="list" id="task_o">
