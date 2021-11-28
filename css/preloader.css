@@ -13,7 +13,10 @@
     width: 70px;
     height: 70px;
     text-align: center;
-    animation: preloader-rotate 2s infinite linear;
+    animation-name: preloader-rotate;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
 .preloader__item {
@@ -24,35 +27,45 @@
     transform-origin: 100% 6px;
     transform: rotate(0deg);
     position: absolute;
+    animation-name: preloader-rotate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
 .preloader__item:nth-child(1) {
-    transform: rotate(45deg);
+    animation-delay: 0.12s;
 }
 .preloader__item:nth-child(2) {
-    transform: rotate(90deg);
+    animation-delay: 0.24s;
 }
 .preloader__item:nth-child(3) {
-    transform: rotate(135deg);
+    animation-delay: 0.36s;
 }
 .preloader__item:nth-child(4) {
-    transform: rotate(180deg);
+    animation-delay: 0.48s;
 }
 .preloader__item:nth-child(5) {
-    transform: rotate(225deg);
+    animation-delay: 0.6s;
 }
 .preloader__item:nth-child(6) {
-    transform: rotate(270deg);
+    animation-delay: 0.72s;
 }
 .preloader__item:nth-child(7) {
-    transform: rotate(315deg);
+    animation-delay: 0.84s;
 }
 
+
 .circle {
-    background: #010440;
+    background: #6c69d2;
     width: 5px;
     height: 5px;
     border-radius: 50%;
+    animation-name: preloader-color;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
 }
 .loaded_hiding .preloader {
     transition: 0.3s opacity;
@@ -60,8 +73,23 @@
 }
 
 @keyframes preloader-rotate {
+    45% {
+        transform: rotate(324deg);
+    }
     100% {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes preloader-color {
+    0% {
+        background: #6c69d2;
+    }
+    50% {
+        background: #8582D9;
+    }
+    100% {
+        background: #6c69d2;
     }
 }
 
