@@ -100,16 +100,35 @@ function getNumber(number) {
     return parseInt(number.split(".")[0]);
 }
 
-function enter() {
-    let mytext = document.getElementById('task');
-    let number = "";
-    try {
-        number = Math.max(getNumber(tasks[tasks.length - 1].text), getNumber(tasks[0].text));
-    } catch {}
-    createTask(setNumber(number + 1, mytext.value));
-    tasks.push(new Task(setNumber(number + 1, mytext.value)));
-    localStorage.setItem('tasks', JSON.stringify(tasks));
-    mytext.value = "";
+async function enter() {
+    document.querySelector('.none').setAttribute("disabled", "")
+    document.querySelector('.loaded').setAttribute("class", "preloader")
+    let url = `https://jsonplaceholder.typicode.com/todos`;
+    let response = await fetch(url);
+    let task;
+    let vari = [];
+    if (response.ok) {
+        let json = await response.json();
+        vari = randomize(json);
+        for (let i = 0; i < json.length; i++) {
+            vari.push(new Task(vari[i]['title'], vari[i]['completed']));
+        }
+        task = vari[0];
+    } else {
+        window.setTimeout(function () {
+            document.getElementById('none').setAttribute('id', 'error');
+        }, 500);
+    }
+    document.getElementById('wait').classList.add('loaded_hiding');
+    window.setTimeout(function () {
+        document.getElementById('wait').classList.add('loaded');
+        document.getElementById('wait').classList.remove('loaded_hiding');
+        let value = Math.max(getNumber(tasks[0].text), getNumber(tasks[tasks.length - 1].text))
+        createTask(value + 1 + ". " + task.title, task.checkbox)
+        tasks.push(new Task(value + 1 + ". " + task.title, task.checkbox))
+        localStorage.setItem('tasks', JSON.stringify(tasks))
+        document.querySelector('.none').removeAttribute("disabled")
+    }, 500);
 }
 
 function show(){
@@ -122,12 +141,16 @@ function show(){
 function sortUp(){
     cond = 0;
     localStorage.setItem('cond', '0');
+    document.querySelectorAll('.fas').forEach(el => el.classList.remove("lookup"))
+    document.querySelectorAll('.fas')[0].classList.add("lookup")
     show()
 }
 
 function sortDown(){
     cond = 1;
     localStorage.setItem('cond', '1');
+    document.querySelectorAll('.fas').forEach(el => el.classList.remove("lookup"))
+    document.querySelectorAll('.fas')[1].classList.add("lookup")
     show()
 }
 
@@ -137,6 +160,8 @@ function random() {
     let copy = JSON.stringify(tasks);
     document.querySelectorAll('.task_q').forEach(el => deleteTask(el));
     localStorage.setItem('tasks', copy);
+    document.querySelectorAll('.fas').forEach(el => el.classList.remove("lookup"))
+    document.querySelectorAll('.fas')[2].classList.add("lookup")
     start();
 }
 function check(){

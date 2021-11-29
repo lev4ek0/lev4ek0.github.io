@@ -13,7 +13,6 @@ localStorage.clear()
 function serialize(data){
     let response = []
     for (let i = 0; i < data.length; i++) {
-        console.log(data[i]);
         response.push(new Task(i + 1 + '. ' + data[i]['title'], data[i]['completed']));
     }
     return response;
