@@ -11,11 +11,6 @@ let cond;
 let tmp = document.getElementById('template');
 const btn = document.querySelector('#none');
 
-btn.addEventListener('mouseenter', () => {
-    btn.style.top = `${Math.random() * 500 + 135}px`;
-    alert('Ха-ха затроллен')
-})
-
 let task_o = document.getElementById("task_o");
 let input = document.getElementById("task");
 let tasks;
@@ -91,12 +86,6 @@ function isElementInViewport (el) {
     );
 }
 
-function areElementsInViewpoint () {
-    let state = true
-    document.querySelectorAll('.task_q').forEach(el => state = isElementInViewport(el) && state);
-    return state
-}
-
 function createTask(name, checked) {
 
     let template = tmp.content.cloneNode(true);
@@ -122,9 +111,6 @@ function createTask(name, checked) {
         }
     }
 
-    if (!areElementsInViewpoint()) {
-        alert('Зачем ты меня пытаешься сломать?((')
-    }
 }
 
 function getNumber(number) {
@@ -133,14 +119,17 @@ function getNumber(number) {
 
 function enter() {
     let mytext = document.getElementById('task');
-    let number = "";
-    try {
-        number = Math.max(getNumber(tasks[tasks.length - 1].text), getNumber(tasks[0].text));
-    } catch {}
-    createTask(setNumber(number + 1, mytext.value));
-    tasks.push(new Task(setNumber(number + 1, mytext.value)));
-    localStorage.setItem('tasks', JSON.stringify(tasks));
-    mytext.value = "";
+    if (mytext.value !== "") {
+        let number = "";
+        try {
+            number = Math.max(getNumber(tasks[tasks.length - 1].text), getNumber(tasks[0].text));
+        } catch {
+        }
+        createTask(setNumber(number + 1, mytext.value));
+        tasks.push(new Task(setNumber(number + 1, mytext.value)));
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+        mytext.value = "";
+    }
 }
 
 function show(){
@@ -172,6 +161,7 @@ function random() {
 }
 function check(){
     let copy = JSON.stringify(tasks);
+    show();
     document.querySelectorAll('.task_q').forEach(el => el.parentNode.childNodes[1].childNodes[1].getAttribute('checked') === null ? deleteTask(el) : {});
     localStorage.setItem('tasks', copy);
     tasks = JSON.parse(localStorage.getItem('tasks'));
@@ -179,6 +169,7 @@ function check(){
 
 function notCheck(){
     let copy = JSON.stringify(tasks);
+    show();
     document.querySelectorAll('.task_q').forEach(el => el.parentNode.childNodes[1].childNodes[1].getAttribute('checked') !== null ? deleteTask(el) : {});
     localStorage.setItem('tasks', copy);
     tasks = JSON.parse(localStorage.getItem('tasks'));
