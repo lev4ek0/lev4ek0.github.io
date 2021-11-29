@@ -9,7 +9,6 @@ class Task {
 let cond;
 
 let tmp = document.getElementById('template');
-const btn = document.querySelector('#none');
 
 let task_o = document.getElementById("task_o");
 let input = document.getElementById("task");
@@ -71,21 +70,6 @@ function setNumber(number, text) {
     return number + ". " + text;
 }
 
-function isElementInViewport (el) {
-    if (typeof jQuery === "function" && el instanceof jQuery) {
-        el = el[0];
-    }
-
-    var rect = el.getBoundingClientRect();
-
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /* or $(window).height() */
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth) /* or $(window).width() */
-    );
-}
-
 function createTask(name, checked) {
 
     let template = tmp.content.cloneNode(true);
@@ -110,7 +94,6 @@ function createTask(name, checked) {
             tmp.parentNode.insertBefore(template, tmp.nextSibling);
         }
     }
-
 }
 
 function getNumber(number) {
@@ -119,17 +102,14 @@ function getNumber(number) {
 
 function enter() {
     let mytext = document.getElementById('task');
-    if (mytext.value !== "") {
-        let number = "";
-        try {
-            number = Math.max(getNumber(tasks[tasks.length - 1].text), getNumber(tasks[0].text));
-        } catch {
-        }
-        createTask(setNumber(number + 1, mytext.value));
-        tasks.push(new Task(setNumber(number + 1, mytext.value)));
-        localStorage.setItem('tasks', JSON.stringify(tasks));
-        mytext.value = "";
-    }
+    let number = "";
+    try {
+        number = Math.max(getNumber(tasks[tasks.length - 1].text), getNumber(tasks[0].text));
+    } catch {}
+    createTask(setNumber(number + 1, mytext.value));
+    tasks.push(new Task(setNumber(number + 1, mytext.value)));
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+    mytext.value = "";
 }
 
 function show(){
@@ -161,7 +141,6 @@ function random() {
 }
 function check(){
     let copy = JSON.stringify(tasks);
-    show();
     document.querySelectorAll('.task_q').forEach(el => el.parentNode.childNodes[1].childNodes[1].getAttribute('checked') === null ? deleteTask(el) : {});
     localStorage.setItem('tasks', copy);
     tasks = JSON.parse(localStorage.getItem('tasks'));
@@ -169,7 +148,6 @@ function check(){
 
 function notCheck(){
     let copy = JSON.stringify(tasks);
-    show();
     document.querySelectorAll('.task_q').forEach(el => el.parentNode.childNodes[1].childNodes[1].getAttribute('checked') !== null ? deleteTask(el) : {});
     localStorage.setItem('tasks', copy);
     tasks = JSON.parse(localStorage.getItem('tasks'));
