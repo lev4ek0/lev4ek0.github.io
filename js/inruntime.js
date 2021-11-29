@@ -110,7 +110,6 @@ async function enter() {
             vari.push(new Task(vari[i]['title'], vari[i]['completed']));
         }
         task = vari[0];
-        console.log(task)
     } else {
         window.setTimeout(function () {
             document.getElementById('none').setAttribute('id', 'error');
@@ -120,7 +119,12 @@ async function enter() {
     window.setTimeout(function () {
         document.getElementById('wait').classList.add('loaded');
         document.getElementById('wait').classList.remove('loaded_hiding');
-        let value = Math.max(getNumber(tasks[0].text), getNumber(tasks[tasks.length - 1].text))
+        let value;
+        try {
+            value = Math.max(getNumber(tasks[0].text), getNumber(tasks[tasks.length - 1].text))
+        } catch (TypeError){
+            value = 0
+        }
         createTask(value + 1 + ". " + task.title, task['completed'])
         tasks.push(new Task(value + 1 + ". " + task.title, task['completed']))
         localStorage.setItem('tasks', JSON.stringify(tasks))
