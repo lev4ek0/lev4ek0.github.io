@@ -9,13 +9,14 @@
   <!--    <link rel="stylesheet" href="css/outline-prototype-safe.css">-->
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/table.css">
+  <link rel="stylesheet" href="../css/slider.css">
+  <link rel="stylesheet" href="../css/nav.css">
   <script rel="script" src="../js/timer.js"></script>
   <script rel="script" src="../js/load.js"></script>
   <script rel="script" src="../js/menu.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"/>
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-  <!--    <lin<span>k rel="script" href="js/timer.js">-->
-
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 </head>
 <body>
 <header id="header">
@@ -29,18 +30,25 @@
     </ul>
   </nav>
 </header>
-<main>
-  <section class="portfolio">
+<nav id="menu" class="menu">
+  <section class="menu-section">
+    <ul class="menu-section-list">
+      <li><a href="../index.html" class="menu">Главная</a></li>
+      <li><a href="about.html" class="menu">Обо мне</a></li>
+      <li><a href="portfolio.html" class="menu">Портфолио</a></li>
+      <li><a href="contact.html" class="menu">Связаться</a></li>
+      <li><a href="inruntime.html" class="menu">InRuntime</a></li>
+    </ul>
+  </section>
+</nav>
+<main id="panel">
+  <header id="mobile">
+    <button class="toggle-button">☰</button>
+  </header>
+  <section class="portfolio section">
     <a class="anchor" id="portfolio"></a>
     <h4>Портфолио</h4>
     <i class="underline fas fa-ellipsis-h fa-lg"></i>
-    <!--        <div class="content" id="portfolio_content">-->
-    <!--            <ul>-->
-    <!--                <li>Сайт-бот с записью в очередь (python, flask, vk-api)</li>-->
-    <!--                <li>Бот с записью в очередь (python, flask, telegram-api)</li>-->
-    <!--                <li><strong>Многопользовательский</strong> сайт (python, django, rest-api)</li>-->
-    <!--            </ul>-->
-    <!--        </div>-->
     <div class="content" id="portfolio_content">
       <table class="table">
         <caption> <strong>Мои проекты</strong> </caption>
@@ -83,6 +91,8 @@
     </p>
   </section>
 </main>
+<script rel="script" src="../js/slideout.js"></script>
+<script rel="script" src="../js/nav.js"></script>
 <footer>
   <div class="footer">
     <a class="home" href="#portfolio"><i class="up fas fa-chevron-circle-up fa-3x"></i></a>

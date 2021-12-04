@@ -1,3 +1,8 @@
+.menu {
+    background-color: unset;
+    background-image: unset;
+}
+
 body {
     color: #010440;
     font-family: "Roboto", serif;
@@ -16,9 +21,13 @@ nav ul {
     }
 }
 
+main {
+    margin-top: 60px;
+}
+
 @media screen and (max-device-width: 880px) {
     main {
-        margin-top: 100px !important;
+        margin-top: 100px;
     }
 }
 
@@ -87,10 +96,6 @@ header {
     z-index: 100;
 }
 
-main {
-    margin-top: 60px;
-}
-
 .home {
     height: 100vh;
     background: url("../img/design-tools.jpg") repeat;
@@ -154,36 +159,36 @@ ul li div {
     text-decoration: line-through;
     display: inline;
 }
-section {
+.section {
     padding: 40px 80px;
     min-height: 100vh;
 }
 
-section h4 {
+.section h4 {
     text-align: center;
     font-size: 30px;
     font-weight: bold;
 }
 
 @media screen and (max-device-width: 480px){
-    section h4 {
+    .section h4 {
         font-size: 50px;
     }
 }
 
 @media screen and (min-device-width: 481px) and (max-device-width: 880px){
-    section h4 {
+    .section h4 {
         font-size: 45px;
     }
 }
 
 @media screen and (min-device-width: 881px) and (max-device-width: 1180px) {
-    section h4 {
+    .section h4 {
         font-size: 40px;
     }
 }
 
-section.home {
+.section.home {
     padding: 0;
 }
 
@@ -239,40 +244,6 @@ section.home {
     }
 }
 
-img.avatar {
-    top: 0;
-    left: 0;
-    position: absolute;
-    width: 400px;
-}
-
-@media screen and (max-device-width: 480px){
-    img.avatar {
-        top: 0;
-        left: 0;
-        position: absolute;
-        width: 800px;
-    }
-}
-
-@media screen and (min-device-width: 481px) and (max-device-width: 880px){
-    img.avatar {
-        top: 0;
-        left: auto;
-        position: absolute;
-        width: 500px;
-    }
-}
-
-@media screen and (min-device-width: 881px) and (max-device-width: 1180px) {
-    img.avatar {
-        top: 0;
-        left: auto;
-        position: absolute;
-        width: 500px;
-    }
-}
-
 aside {
     font-size: 16px;
     width: calc(100vw - 660px);
@@ -315,10 +286,7 @@ aside {
         right: 0;
         font-size: 30px;
     }
-    img.avatar {
-        position: absolute;
-        width: 700px;
-    }
+
     #second {
         position: absolute;
         top: 800px;
