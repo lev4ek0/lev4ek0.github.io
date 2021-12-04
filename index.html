@@ -9,13 +9,14 @@
 <!--    <link rel="stylesheet" href="css/outline-prototype-safe.css">-->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/table.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/nav.css">
     <script rel="script" src="js/timer.js"></script>
     <script rel="script" src="js/load.js"></script>
     <script rel="script" src="js/menu.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"/>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <!--    <lin<span>k rel="script" href="js/timer.js">-->
-
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 </head>
 <body>
 <header id="header">
@@ -29,9 +30,23 @@
         </ul>
     </nav>
 </header>
+<nav id="menu" class="menu">
+    <section class="menu-section">
+        <ul class="menu-section-list">
+            <li><a href="index.html" class="menu">Главная</a></li>
+            <li><a href="html/about.html" class="menu">Обо мне</a></li>
+            <li><a href="html/portfolio.html" class="menu">Портфолио</a></li>
+            <li><a href="html/contact.html" class="menu">Связаться</a></li>
+            <li><a href="html/inruntime.html" class="menu">InRuntime</a></li>
+        </ul>
+    </section>
+</nav>
 
-<main>
-    <section class="home">
+<main id="panel">
+    <header id="mobile">
+        <button class="toggle-button">☰</button>
+    </header>
+    <section class="home section">
         <a class="anchor" id="home"></a>
         <div class="darken">
             <article>
@@ -41,6 +56,8 @@
         </div>
     </section>
 </main>
+<script rel="script" src="js/slideout.js"></script>
+<script rel="script" src="js/nav.js"></script>
 <footer>
     <div class="footer">
         <a class="home" href="#home"><i class="up fas fa-chevron-circle-up fa-3x"></i></a>

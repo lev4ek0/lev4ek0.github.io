@@ -11,7 +11,7 @@
         bottom: 0;
         right: 0;
         z-index: 0;
-        width: 256px;
+        width: 300px;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
         display: none;
@@ -37,8 +37,18 @@
     }
     .menu a{
         color: #010440;
+        font-size: 50px;
     }
     .menu-section-list{
         flex-direction: column;
+    }
+    #mobile {
+        position: absolute;
+        height: 100px;
+        background-color: rgba(1, 4, 64, 0);
+        box-shadow: none;
+    }
+    .toggle-button {
+        font-size: 3.9em;
     }
 }

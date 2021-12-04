@@ -5,7 +5,7 @@ if (px480['matches']) {
     let slideout = new Slideout({
         'panel': document.getElementById('panel'),
         'menu': document.getElementById('menu'),
-        'padding': 256,
+        'padding': 300,
         'tolerance': 70,
         'easing': 'cubic-bezier(.32,2,.55,.27)'
     });
