@@ -8,7 +8,4 @@ window.onload = function () {
         wrapAround: true,
         accessibility: false,
     });
-
-
-    flkty.playPlayer();
 }
