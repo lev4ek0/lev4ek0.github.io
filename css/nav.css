@@ -20,6 +20,8 @@
     .slideout-panel {
         position: relative;
         z-index: 1;
+        background: #f2f2f8;
+        box-shadow: 0 0 50px 0 #333;
     }
 
     .slideout-open,
@@ -50,5 +52,19 @@
     }
     .toggle-button {
         font-size: 3.9em;
+        background: #afaddc;
+        border-width: 1px;
+        border-color: #8582D9;
+        color: #010440;
+        box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+    }
+    .flickity-prev-next-button {
+        width: 80px !important;
+        height: 80px !important;
+    }
+
+    .flickity-page-dots .dot {
+        width: 20px !important;
+        height: 20px !important;
     }
 }

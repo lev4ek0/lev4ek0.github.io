@@ -307,6 +307,7 @@ aside {
 .about {
     position: relative;
     box-shadow: 0 -20px 10px 5px rgb(0, 0, 0);
+    z-index: 2;
 }
 
 #second {
@@ -447,6 +448,7 @@ footer {
     height: 170px;
     background: #4946A6;
     box-shadow: 0 0 10px 5px rgb(120, 117, 238);
+    z-index: 3;
 }
 
 .footnote {
